@@ -70,3 +70,40 @@ console.log(name, city);
 
 const dest = ({ name }) => console.log(name);
 dest(user);
+
+/**
+ * Rest
+ */
+const user2 = {
+  name2: "Raphael",
+  age: 25,
+  address: {
+    city: "São Carlos",
+    estado: "SC"
+  }
+};
+const { name2, ...rest } = user2;
+console.log(name2, rest);
+
+const arr2 = [1, 2, 3, 4];
+const [a, b, ...c] = arr2;
+console.log(a, b, c);
+
+const soma = (...params) => params.reduce((total, next) => total + next);
+console.log(soma(a, b));
+
+/**
+ * Spread
+ */
+const arrSpread1 = [1, 2, 3];
+const arrSpread2 = [4, 5, 6];
+const arrTotal = [...arrSpread1, ...arrSpread2];
+console.log(arrTotal);
+
+const raphael = {
+  name: "Raphael",
+  age: 23
+};
+
+const raphael2 = { ...raphael, age: 25 };
+console.log(raphael2);
