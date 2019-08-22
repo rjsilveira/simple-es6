@@ -93,3 +93,38 @@ var teste = function teste() {
 };
 
 console.log(teste());
+/**
+ * Defautl values
+ */
+
+var func = function func() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
+  return a + b;
+};
+
+console.log(func());
+console.log(func(1, 1));
+/**
+ * Destructuring
+ */
+
+var user = {
+  name: "Raphael",
+  age: 25,
+  address: {
+    city: "São Carlos",
+    estado: "SC"
+  }
+};
+console.log(user);
+var name = user.name,
+    city = user.address.city;
+console.log(name, city);
+
+var dest = function dest(_ref) {
+  var name = _ref.name;
+  return console.log(name);
+};
+
+dest(user);

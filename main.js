@@ -42,3 +42,31 @@ console.log(find);
 
 const teste = () => "teste";
 console.log(teste());
+
+/**
+ * Defautl values
+ */
+const func = (a = 3, b = 5) => a + b;
+console.log(func());
+console.log(func(1, 1));
+
+/**
+ * Destructuring
+ */
+const user = {
+  name: "Raphael",
+  age: 25,
+  address: {
+    city: "São Carlos",
+    estado: "SC"
+  }
+};
+console.log(user);
+const {
+  name,
+  address: { city }
+} = user;
+console.log(name, city);
+
+const dest = ({ name }) => console.log(name);
+dest(user);
