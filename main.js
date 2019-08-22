@@ -107,3 +107,23 @@ const raphael = {
 
 const raphael2 = { ...raphael, age: 25 };
 console.log(raphael2);
+
+/**
+ * Template
+ */
+const username = "Raphael";
+const userAge = 25;
+
+console.log(`Meu nome é ${username}, e minha idade é ${userAge}`);
+
+/**
+ * Object Short syntax
+ */
+const username2 = "Raphael";
+const userAge23 = 25;
+
+const userObject = { username2, userAge23 };
+console.log(userObject);
+
+import { somaexterna } from "./funcoes";
+console.log(somaexterna(1, 1));
